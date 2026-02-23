@@ -1,0 +1,29 @@
+{
+  "name": "expressrestapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cawodevelopment/ExpressRestAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cawodevelopment/ExpressRestAPI/issues"
+  },
+  "homepage": "https://github.com/cawodevelopment/ExpressRestAPI#readme",
+  "dependencies": {
+    "@prisma/client": "6.19",
+    "express": "^5.2.1",
+    "prisma": "6.19"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
