@@ -1,12 +1,12 @@
 import HttpError from '../errors/http.error.js';
 
-const valdate = (schema) => (req, res, next) => {
+const validate = (schema) => (req, res, next) => {
     try {
-        schema.parse(req.body);
+        req.body = schema.parse(req.body);
         next();
-    } catch (err) {
-        throw new HttpError(400, 'Invalid input data', err.errors);
+    } catch {
+        throw new HttpError(400, 'Invalid input data');
     }
 }
 
-export default valdate;
+export default validate;

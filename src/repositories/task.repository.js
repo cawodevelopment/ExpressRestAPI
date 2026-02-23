@@ -1,7 +1,9 @@
 import prisma from '../utils/client.js';
 
-export const findAllTasks = async () => {
-    return await prisma.task.findMany();
+export const findAllTasks = async (userId) => {
+    return await prisma.task.findMany({
+        where: { userId }
+    });
 }
 
 export const findTaskById = async (taskId, userId) => {
@@ -31,7 +33,8 @@ export const updateTask = async (taskId, taskData, userId) => {
         },
         data: {
             title: taskData.title,
-            description: taskData.description
+            description: taskData.description,
+            completed: taskData.completed
         }
     });
 }

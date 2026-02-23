@@ -20,7 +20,12 @@ export const createTask = async (taskData, userId) => {
         throw new HttpError(400, 'Task creation failed');
     }
 
-    return newTask;
+    return {
+        id: newTask.id,
+        title: newTask.title,
+        description: newTask.description,
+        completed: newTask.completed
+    };
 }
 
 export const updateTask = async (taskId, taskData, userId) => {

@@ -9,7 +9,7 @@ export const generateAccessToken = (user) => {
     return jwt.sign(
         payload, 
         process.env.ACCESS_TOKEN_SECRET, 
-        { expiresIn: process.env.ACCESS_TOKEN_EXPIRES_IN || '15m' }
+        { expiresIn: process.env.ACCESS_TOKEN_EXPIRES_IN }
     );
 }
 
@@ -22,6 +22,6 @@ export const generateRefreshToken = (user) => {
     return jwt.sign(
         payload, 
         process.env.REFRESH_TOKEN_SECRET, 
-        { expiresIn: process.env.REFRESH_TOKEN_EXPIRES_IN || '7d' }
+        { expiresIn: process.env.REFRESH_TOKEN_EXPIRES_IN }
     );
 }

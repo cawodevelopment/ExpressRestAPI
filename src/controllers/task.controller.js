@@ -34,8 +34,5 @@ export const updateTask = async (req, res) => {
 
 export const deleteTask = async (req, res) => {
     await tasksService.deleteTask(req.params.id, req.userId);
-    res.status(204).json({
-        success: true,
-        data: null
-    });
+    res.status(204).json();
 }
