@@ -1,19 +1,15 @@
-# Dependencies
 node_modules
 npm-debug.log
 yarn-error.log
 
-# Environment files
 .env
 .env.local
 .env.*.local
 
-# Git
 .git
 .gitignore
 .gitattributes
 
-# IDE
 .vscode
 .idea
 *.swp
@@ -21,34 +17,28 @@ yarn-error.log
 *~
 .DS_Store
 
-# Documentation
 README.md
 *.md
 docs
 
-# Development
 nodemon.json
 .eslintrc*
 .prettierrc*
 
-# Testing
 test
 tests
 *.test.js
 *.spec.js
 coverage
 
-# Docker
 Dockerfile
 .dockerignore
 docker-compose.yml
 
-# CI/CD
 .github
 .gitlab-ci.yml
 .travis.yml
 
-# Other
 *.log
 dist
 build
